@@ -6,7 +6,7 @@ import { PhotoService } from './photo.service';
 describe('Service: Photo', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [PhotoService]
+      providers: [PhotoService],
     });
   });
 

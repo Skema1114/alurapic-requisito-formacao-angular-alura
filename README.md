@@ -30,6 +30,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 npm install bootstrap
 
+ng g c photos/photos-list
+
+ng g c photos/photos-form
+
+ng g m errors
+
+ng g c errors/not-found
+
 ## Anotações
 
 - Um feature module é um modulo que dentro dele tem um monte de conteudo que fazem sentido serem agrupados juntos.
