@@ -34,3 +34,11 @@ npm install bootstrap
 
 - Um feature module é um modulo que dentro dele tem um monte de conteudo que fazem sentido serem agrupados juntos.
 - Há uma convenção em relação a organização dos imports no angular, onde primeiro vem os imports que o proprio angular faz e na sequencia (separado por um enter) vem os imports que nós importamos, ou seja, pode ser componentes, services, etc.
+- A opção `Rename Symbol` do VSCode (clicando com o direito em uma variavel) faz com que seja possivel editar e alterar aquela determonada variavel em todos os lugares que a mesma foi chamada;
+- Na convenção o método `ngOnInit` fica depois do `constructor`;
+- Na convenção (acho que essa é do curso só) o `constructor` é destinado a injeção de dependecias e qualquer inicilização posterior tem que ser feita no `ngOnInit`;
+
+## Iniciando a API
+
+- npm install
+- npm start
