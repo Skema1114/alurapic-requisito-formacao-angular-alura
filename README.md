@@ -38,13 +38,16 @@ ng g m errors
 
 ng g c errors/not-found
 
+ng g c photos/photo-list/photos
+
 ## Anotações
 
-- Um feature module é um modulo que dentro dele tem um monte de conteudo que fazem sentido serem agrupados juntos.
-- Há uma convenção em relação a organização dos imports no angular, onde primeiro vem os imports que o proprio angular faz e na sequencia (separado por um enter) vem os imports que nós importamos, ou seja, pode ser componentes, services, etc.
-- A opção `Rename Symbol` do VSCode (clicando com o direito em uma variavel) faz com que seja possivel editar e alterar aquela determonada variavel em todos os lugares que a mesma foi chamada;
+- Um feature module é um módulo que dentro dele tem um monte de conteúdo que fazem sentido serem agrupados juntos.
+- Há uma convenção em relação a organização dos imports no angular, onde primeiro vem os imports que o próprio angular faz e na sequência (separado por um enter) vem os imports que nós importamos, ou seja, pode ser componentes, services, etc.
+- A opção `Rename Symbol` do VSCode (clicando com o direito em uma variável) faz com que seja possível editar e alterar aquela determinada variável em todos os lugares que a mesma foi chamada;
 - Na convenção o método `ngOnInit` fica depois do `constructor`;
-- Na convenção (acho que essa é do curso só) o `constructor` é destinado a injeção de dependecias e qualquer inicilização posterior tem que ser feita no `ngOnInit`;
+- Na convenção (acho que essa é do curso só) o `constructor` é destinado a injeção de dependências e qualquer inicialização posterior tem que ser feita no `ngOnInit`;
+- O `ngOnChanges` recebe um parâmetro do tipo `SimpleChanges` e dentro desse método pode-se verificar se alguma propriedade teve alterações, teve mudanças, basta testar `changes.photos` (exemplo da propriedade photos);
 
 ## Iniciando a API
 
