@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -14,5 +14,11 @@ export class PhotoService {
 
   listFromUser(userName: string): Observable<Photos> {
     return this.httpClient.get<Photos>(`${API}/${userName}/photos`);
+  }
+
+  listFromUserPaginated(userName: string, page: number): Observable<Photos> {
+    const params = new HttpParams().append('page', page.toString());
+
+    return this.httpClient.get<Photos>(`${API}/${userName}/photos`, { params });
   }
 }
