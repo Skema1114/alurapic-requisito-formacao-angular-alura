@@ -56,6 +56,8 @@ npm i font-awesome
 - O `rxjs` possui diversos operadores chamados `Lettable Operators` e que podem ser utilizados para as mais diversas finalidades a fim de facilitar diversas operações e funcionalidades, um dos utilizados aqui foi o `debounceTime`;
 - Toda vez que tem algo que fica emitindo valores e nunca termina (tipo um `Observable` sem o `.complete()`), o `ngOnDestroy` pode ser uma solução, exemplo utilizado no arquivo `photo-list.component.ts`, o `ngOnDestroy` é o fim do ciclo de vida de um componente, ou seja, caso ta na pagina A e navega para B, em teoria a A teria que ser destruída;
 - Uma diretiva (exemplo aqui é da `darken-on-hover.directive.ts`) é utilizada passando o seu selector na tag, ou seja `<a apDarkenOnHover>oi</a>` e as também pode receber propriedades, que serão passadas assim: `<a apDarkenOnHover brightness="70%">oi</a>`;
+- Você só coloca no `exports` (no módulo) aquilo que você quer ter acesso no template de outro componente;
+- Esse pedaço de código equivale a um if, `this.platformDetectorService.isPlatformBrowser() && this.userNameInput.nativeElement.focus();` que testa se o `isPlatformBrowser()` é verdadeiro, se for, o código executará o que está a sequência dos e's comerciais, se não, não executa o que está na sequência dos &&. Esse código em específico (junto do seu service, `platform-detector.service.ts`) faz com que determinado código seja executado somente se o mesmo estiver rodando em um navegador, nunca em um dispositivo móvel;
 
 ## Iniciando a API
 
