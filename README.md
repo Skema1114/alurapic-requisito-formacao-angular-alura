@@ -42,17 +42,20 @@ ng g c photos/photo-list/photos
 
 ng g c photos/photo-list/load-button
 
+npm i font-awesome
+
 ## Anotações
 
 - Um feature module é um módulo que dentro dele tem um monte de conteúdo que fazem sentido serem agrupados juntos.
-- Há uma convenção em relação a organização dos imports no angular, onde primeiro vem os imports que o próprio angular faz e na sequência (separado por um enter) vem os imports que nós importamos, ou seja, pode ser componentes, services, etc.
+- Há uma convenção em relação a organização dos `imports` no angular, onde primeiro vem os `imports` que o próprio angular faz e na sequência (separado por um enter) vem os `imports` que nós importamos, ou seja, pode ser componentes, services, etc.
 - A opção `Rename Symbol` do VSCode (clicando com o direito em uma variável) faz com que seja possível editar e alterar aquela determinada variável em todos os lugares que a mesma foi chamada;
 - Na convenção o método `ngOnInit` fica depois do `constructor`;
 - Na convenção (acho que essa é do curso só) o `constructor` é destinado a injeção de dependências e qualquer inicialização posterior tem que ser feita no `ngOnInit`;
 - O `ngOnChanges` recebe um parâmetro do tipo `SimpleChanges` e dentro desse método pode-se verificar se alguma propriedade teve alterações, teve mudanças, basta testar `changes.photos` (exemplo da propriedade photos);
-- O pattern `debounce` em um filtro, pega a palavra que o usuario digitou em um determinado tempo de pausa, exemplo, usuario digitou e parou 300 milisegundos, a partir dai ele ira pegar a palavra digitada, isso é uma estrategia de performance;
-- O `rxjs` possui diversos operadores chamados `Lettable Operators` e que podem ser utilizados para as mais diversas finalidades a fim de facilitar diversas operações e funcionalidades, um dos utilizados aqui foi o `debounceTime` no arquivo `photo-list.component.ts`;
-- Toda vez que tem algo que fica emitindo valores e nunca termina (tipo um `Observable` sem o `.complete()`), o `ngOnDestroy` pode ser uma solução, exemplo utilizado no arquivo `photo-list.component.ts`, o `ngOnDestroy` é o fim do ciclo de vida de um componente, ou seja, caso ta na pagina A e navega para B, em teoria a A teria que ser destruida;
+- O pattern `debounce` em um filtro, pega a palavra que o usuário digitou em um determinado tempo de pausa, exemplo, usuário digitou e parou 300 milissegundos, a partir dai ele ira pegar a palavra digitada, isso é uma estratégia de performance;
+- O `rxjs` possui diversos operadores chamados `Lettable Operators` e que podem ser utilizados para as mais diversas finalidades a fim de facilitar diversas operações e funcionalidades, um dos utilizados aqui foi o `debounceTime`;
+- Toda vez que tem algo que fica emitindo valores e nunca termina (tipo um `Observable` sem o `.complete()`), o `ngOnDestroy` pode ser uma solução, exemplo utilizado no arquivo `photo-list.component.ts`, o `ngOnDestroy` é o fim do ciclo de vida de um componente, ou seja, caso ta na pagina A e navega para B, em teoria a A teria que ser destruída;
+- Uma diretiva (exemplo aqui é da `darken-on-hover.directive.ts`) é utilizada passando o seu selector na tag, ou seja `<a apDarkenOnHover>oi</a>` e as também pode receber propriedades, que serão passadas assim: `<a apDarkenOnHover brightness="70%">oi</a>`;
 
 ## Iniciando a API
 

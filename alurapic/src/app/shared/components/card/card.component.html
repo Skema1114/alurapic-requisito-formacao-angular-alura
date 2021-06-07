@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-header text-center" *ngIf="title">
+    {{ title }}
+  </div>
+  <div class="card-body">
+    <ng-content select="[body]"></ng-content>
+  </div>
+  <div class="card-footer text-muted">
+    <ng-content select="[footer]"></ng-content>
+  </div>
+</div>
+
+<br />
