@@ -1,3 +1,15 @@
+# Neste projeto:
+
+- Primeiro curso:
+
+  - Angular parte 1: Fundamentos
+  - https://cursos.alura.com.br/course/angular-fundamentos
+
+- Segundo curso:
+
+  - Angular parte 2: Autenticação, Forms e lazy loading
+  - https://cursos.alura.com.br/course/angular-autenticacao
+
 # AlurapicRequisitoFormacaoAngularAlura
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.
