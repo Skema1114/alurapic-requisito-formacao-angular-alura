@@ -2,7 +2,7 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
-import { TokenService } from '../token/token.service';
+import { UserService } from '../user/user.service';
 
 const API_URL = 'http://localhost:3000';
 
@@ -12,7 +12,7 @@ const API_URL = 'http://localhost:3000';
 export class AuthService {
   constructor(
     private httpClient: HttpClient,
-    private tokenService: TokenService
+    private userService: UserService
   ) {}
 
   authenticate(
@@ -33,7 +33,7 @@ export class AuthService {
           const authToken = res.headers.get('x-access-token');
 
           if (authToken) {
-            this.tokenService.setToken(authToken);
+            this.userService.setToken(authToken);
           } else {
             console.log('Token nulo');
           }

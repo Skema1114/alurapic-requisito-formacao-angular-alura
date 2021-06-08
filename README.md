@@ -56,6 +56,8 @@ ng g c photos/photo-list/load-button
 
 npm i font-awesome
 
+npm i jwt-decode
+
 ## Anotações
 
 - Um feature module é um módulo que dentro dele tem um monte de conteúdo que fazem sentido serem agrupados juntos.
@@ -70,6 +72,9 @@ npm i font-awesome
 - Uma diretiva (exemplo aqui é da `darken-on-hover.directive.ts`) é utilizada passando o seu selector na tag, ou seja `<a apDarkenOnHover>oi</a>` e as também pode receber propriedades, que serão passadas assim: `<a apDarkenOnHover brightness="70%">oi</a>`;
 - Você só coloca no `exports` (no módulo) aquilo que você quer ter acesso no template de outro componente;
 - Esse pedaço de código equivale a um if, `this.platformDetectorService.isPlatformBrowser() && this.userNameInput.nativeElement.focus();` que testa se o `isPlatformBrowser()` é verdadeiro, se for, o código executará o que está a sequência dos e's comerciais, se não, não executa o que está na sequência dos &&. Esse código em específico (junto do seu service, `platform-detector.service.ts`) faz com que determinado código seja executado somente se o mesmo estiver rodando em um navegador, nunca em um dispositivo móvel;
+- Apenas componentes possuem o `ngOnInit`, caso necessite adicionar um código de inicialização em um `service` por exemplo, será necessário adicionar no seu `constructor`;
+- O `behaviorSubject` guarda a ultima emissão até que apareça algo para consumir essa emisão, diferente do `subject`, mas o `behaviorSubject` precisa ser inicializado, o que pode ser feito com um objeto vazio, desde que o tipo daquele `behaviorSubject` (ex: `BehaviorSubject<User>`) possa receber objetos vazios;
+- Para garantir e nao dar erros (o instrutor falou que pode dar muitos) depois de inserir um `guard` no `app-routing` é necessário reiniciar;
 
 ## Iniciando a API
 
