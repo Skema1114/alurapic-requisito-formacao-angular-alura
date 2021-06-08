@@ -40,11 +40,11 @@
     <button
       type="submit"
       class="btn btn-primary btn-block"
-      [disabled]="loginForm.invalid"
+      [disabled]="loginForm.invalid || loginForm.pending"
     >
       login
     </button>
   </div>
 </form>
 
-<p>Not a user?<a>Register now</a></p>
+<p>Not a user?<a>&ensp;Register now</a></p>

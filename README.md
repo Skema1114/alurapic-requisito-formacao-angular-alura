@@ -75,6 +75,7 @@ npm i jwt-decode
 - Apenas componentes possuem o `ngOnInit`, caso necessite adicionar um código de inicialização em um `service` por exemplo, será necessário adicionar no seu `constructor`;
 - O `behaviorSubject` guarda a ultima emissão até que apareça algo para consumir essa emisão, diferente do `subject`, mas o `behaviorSubject` precisa ser inicializado, o que pode ser feito com um objeto vazio, desde que o tipo daquele `behaviorSubject` (ex: `BehaviorSubject<User>`) possa receber objetos vazios;
 - Para garantir e nao dar erros (o instrutor falou que pode dar muitos) depois de inserir um `guard` no `app-routing` é necessário reiniciar;
+- Para validação do formulário é necessário utilizar `signupForm.invalid || signupForm.pending`, pois assim também verifica se o mesmo ainda tem algo pendente, ou seja, se há alguma validação assincrona rodando;
 
 ## Iniciando a API
 
