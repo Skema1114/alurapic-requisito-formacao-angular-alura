@@ -3,9 +3,10 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
+import { environment } from 'src/environments/environment';
 import { UserService } from '../user/user.service';
 
-const API_URL = 'http://localhost:3000';
+const API_URL = environment.ApiUrl;
 
 @Injectable({
   providedIn: 'root',

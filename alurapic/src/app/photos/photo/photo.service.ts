@@ -3,10 +3,11 @@ import { Injectable } from '@angular/core';
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 
+import { environment } from 'src/environments/environment';
 import { Photo, Photos } from './photo';
 import { PhotosComments } from './photo-comment';
 
-const API_URL = 'http://localhost:3000';
+const API_URL = environment.ApiUrl;
 
 @Injectable({
   providedIn: 'root',
