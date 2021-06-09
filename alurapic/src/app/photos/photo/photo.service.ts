@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 import { Photo, Photos } from './photo';
+import { PhotosComments } from './photo-comment';
 
 const API_URL = 'http://localhost:3000';
 
@@ -38,7 +39,19 @@ export class PhotoService {
     return this.httpClient.post(`${API_URL}/photos/upload`, formData);
   }
 
-  findById(id: string): Observable<Photo> {
-    return this.httpClient.get<Photo>(`${API_URL}/photos/${id}`);
+  findById(photoId: number): Observable<Photo> {
+    return this.httpClient.get<Photo>(`${API_URL}/photos/${photoId}`);
+  }
+
+  getComments(photoId: number): Observable<PhotosComments> {
+    return this.httpClient.get<PhotosComments>(
+      `${API_URL}/photos/${photoId}/comments`
+    );
+  }
+
+  addComments(photoId: number, commentText: string): Observable<Object> {
+    return this.httpClient.post(`${API_URL}/photos/${photoId}/comments`, {
+      commentText,
+    });
   }
 }
