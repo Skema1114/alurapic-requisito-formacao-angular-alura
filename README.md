@@ -58,6 +58,8 @@ npm i font-awesome
 
 npm i jwt-decode
 
+ng build --prod
+
 ## Anotações
 
 - Um feature module é um módulo que dentro dele tem um monte de conteúdo que fazem sentido serem agrupados juntos.
@@ -76,6 +78,10 @@ npm i jwt-decode
 - O `behaviorSubject` guarda a ultima emissão até que apareça algo para consumir essa emisão, diferente do `subject`, mas o `behaviorSubject` precisa ser inicializado, o que pode ser feito com um objeto vazio, desde que o tipo daquele `behaviorSubject` (ex: `BehaviorSubject<User>`) possa receber objetos vazios;
 - Para garantir e nao dar erros (o instrutor falou que pode dar muitos) depois de inserir um `guard` no `app-routing` é necessário reiniciar;
 - Para validação do formulário é necessário utilizar `signupForm.invalid || signupForm.pending`, pois assim também verifica se o mesmo ainda tem algo pendente, ou seja, se há alguma validação assincrona rodando;
+- Para usar hash na url basta alterar de `forRoot(routes)` para `forRoot(routes, { useHash: true })` na linha de `imports` do arquivo `app.routing.module.ts`;
+- Code spliting (separação dos módulos do projeto) e Lazy Load para performance;
+- Se quiser carregar um modulo da forma LazyLoad, ele NÃO PODE ser importado no `app.module.ts`;
+- Uma boa prática é que o `AppRoutingModule` seja a ultima importação dentro do array de `imports`;
 
 ## Iniciando a API
 
