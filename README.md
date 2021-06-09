@@ -10,6 +10,10 @@
   - Angular parte 2: Autenticação, Forms e lazy loading
   - https://cursos.alura.com.br/course/angular-autenticacao
 
+- Terceiro curso:
+  - Angular parte 3: upload, build e novos componentes
+  - https://cursos.alura.com.br/course/angular-upload-build
+
 # AlurapicRequisitoFormacaoAngularAlura
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.
@@ -76,12 +80,12 @@ ng build --prod
 - Esse pedaço de código equivale a um if, `this.platformDetectorService.isPlatformBrowser() && this.userNameInput.nativeElement.focus();` que testa se o `isPlatformBrowser()` é verdadeiro, se for, o código executará o que está a sequência dos e's comerciais, se não, não executa o que está na sequência dos &&. Esse código em específico (junto do seu service, `platform-detector.service.ts`) faz com que determinado código seja executado somente se o mesmo estiver rodando em um navegador, nunca em um dispositivo móvel;
 - Apenas componentes possuem o `ngOnInit`, caso necessite adicionar um código de inicialização em um `service` por exemplo, será necessário adicionar no seu `constructor`;
 - O `behaviorSubject` guarda a ultima emissão até que apareça algo para consumir essa emisão, diferente do `subject`, mas o `behaviorSubject` precisa ser inicializado, o que pode ser feito com um objeto vazio, desde que o tipo daquele `behaviorSubject` (ex: `BehaviorSubject<User>`) possa receber objetos vazios;
-- Para garantir e nao dar erros (o instrutor falou que pode dar muitos) depois de inserir um `guard` no `app-routing` é necessário reiniciar;
-- Para validação do formulário é necessário utilizar `signupForm.invalid || signupForm.pending`, pois assim também verifica se o mesmo ainda tem algo pendente, ou seja, se há alguma validação assincrona rodando;
+- Para garantir e não dar erros (o instrutor falou que pode dar muitos) depois de inserir um `guard` no `app-routing` é necessário reiniciar;
+- Para validação do formulário é necessário utilizar `signupForm.invalid || signupForm.pending`, pois assim também verifica se o mesmo ainda tem algo pendente, ou seja, se há alguma validação assíncrona rodando;
 - Para usar hash na url basta alterar de `forRoot(routes)` para `forRoot(routes, { useHash: true })` na linha de `imports` do arquivo `app.routing.module.ts`;
 - Code spliting (separação dos módulos do projeto) e Lazy Load para performance;
-- Se quiser carregar um modulo da forma LazyLoad, ele NÃO PODE ser importado no `app.module.ts`;
-- Uma boa prática é que o `AppRoutingModule` seja a ultima importação dentro do array de `imports`;
+- Se quiser carregar um módulo da forma LazyLoad, ele NÃO PODE ser importado no `app.module.ts`;
+- Uma boa prática é que o `AppRoutingModule` seja a última importação dentro do array de `imports`;
 
 ## Iniciando a API
 

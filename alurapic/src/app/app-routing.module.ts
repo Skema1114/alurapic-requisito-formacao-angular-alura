@@ -25,7 +25,7 @@ const routes: Routes = [
       photos: PhotoListResolver,
     },
   },
-  { path: 'p/add', component: PhotoFormComponent },
+  { path: 'photo/add', component: PhotoFormComponent },
   { path: '**', component: NotFoundComponent },
 ];
 
