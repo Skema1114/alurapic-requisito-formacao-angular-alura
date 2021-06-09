@@ -86,6 +86,7 @@ ng build --prod
 - Code spliting (separação dos módulos do projeto) e Lazy Load para performance;
 - Se quiser carregar um módulo da forma LazyLoad, ele NÃO PODE ser importado no `app.module.ts`;
 - Uma boa prática é que o `AppRoutingModule` seja a última importação dentro do array de `imports`;
+- É possível utilizar o `ngOnInit` em uma `directive`;
 
 ## Iniciando a API
 
