@@ -87,6 +87,7 @@ ng build --prod
 - Se quiser carregar um módulo da forma LazyLoad, ele NÃO PODE ser importado no `app.module.ts`;
 - Uma boa prática é que o `AppRoutingModule` seja a última importação dentro do array de `imports`;
 - É possível utilizar o `ngOnInit` em uma `directive`;
+- Quando faz `[routerLink]="['photo']` ele montará o link dando continuidade do caminho em que o usuario se encontra, ou seja, se ele estivesse em `http://...:3000/rafael` ele ficaria `http://...:3000/rafael/photo`, mas para ir para photos a partir da raiz tem que fazer `[routerLink]="['/photo']` que dai ele vai acessar `http://...:3000/photo`;
 
 ## Iniciando a API
 

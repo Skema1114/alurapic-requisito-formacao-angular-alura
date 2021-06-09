@@ -2,7 +2,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { Photos } from './photo';
+import { Photo, Photos } from './photo';
 
 const API_URL = 'http://localhost:3000';
 
@@ -24,7 +24,11 @@ export class PhotoService {
     });
   }
 
-  upload(description: string, allowComments: boolean, file: File) {
+  upload(
+    description: string,
+    allowComments: boolean,
+    file: File
+  ): Observable<Object> {
     const formData = new FormData();
 
     formData.append('description', description);
@@ -32,5 +36,9 @@ export class PhotoService {
     formData.append('imageFile', file);
 
     return this.httpClient.post(`${API_URL}/photos/upload`, formData);
+  }
+
+  findById(id: string): Observable<Photo> {
+    return this.httpClient.get<Photo>(`${API_URL}/photos/${id}`);
   }
 }
