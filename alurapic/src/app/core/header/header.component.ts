@@ -12,11 +12,11 @@ import { UserService } from '../user/user.service';
 export class HeaderComponent implements OnInit {
   user$!: Observable<User>;
 
-  constructor(private userService: UserService, private router: Router) {
+  constructor(private userService: UserService, private router: Router) {}
+
+  ngOnInit() {
     this.user$ = this.userService.getUser();
   }
-
-  ngOnInit() {}
 
   logout() {
     this.userService.logout();
