@@ -1,0 +1,15 @@
+<div
+  *ngIf="
+    (loading$ | async) == 'loading';
+    then loadingTemplate;
+    else stoppedTemplate
+  "
+></div>
+
+<ng-template #stoppedTemplate>
+  <hr class="stopped" />
+</ng-template>
+
+<ng-template #loadingTemplate>
+  <hr class="loading" />
+</ng-template>
