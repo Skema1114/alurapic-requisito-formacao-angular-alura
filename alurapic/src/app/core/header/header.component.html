@@ -1,7 +1,23 @@
 <header class="fixed-top">
   <nav class="navbar navbar-light bg-light shadow-sm">
     <div class="container-fluid">
-      <a class="navbar-brand display-4">ALURAPIC</a>
+      <a class="navbar-brand display-4">
+        <i
+          class="fa fa-bars mr-2"
+          (click)="menuComponent.toggle()"
+          tabindex="0"
+          (keyup.space)="menuComponent.toggle()"
+        ></i>
+        ALURAPIC</a
+      >
+
+      <ap-menu #menuComponent>
+        <ul class="list-unstyled text-center">
+          <li>
+            <a apShowIfLogged [routerLink]="['photo', 'add']">Upload</a>
+          </li>
+        </ul>
+      </ap-menu>
 
       <div *ngIf="user$ | async as user">
         <div *ngIf="user.name; else loginTemplate">
