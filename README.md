@@ -11,8 +11,14 @@
   - https://cursos.alura.com.br/course/angular-autenticacao
 
 - Terceiro curso:
+
   - Angular parte 3: upload, build e novos componentes
   - https://cursos.alura.com.br/course/angular-upload-build
+
+- Quarto curso:
+
+  - Angular parte 4: lapidando o projeto
+  - https://cursos.alura.com.br/course/angular-lapidando-projeto
 
 # AlurapicRequisitoFormacaoAngularAlura
 
