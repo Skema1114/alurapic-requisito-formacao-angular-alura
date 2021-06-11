@@ -28,9 +28,13 @@ export class GlobalErrorHandler implements ErrorHandler {
         .map((stack) => stack.toString())
         .join('\n');
 
-      console.log(stackAsString);
-      console.log(message);
-      console.log('--- para o servidor ---');
+      console.log({
+        message,
+        url,
+        userName: userService.getUserName(),
+        stack: stackAsString,
+      });
+
       serverLogService
         .log({
           message,
