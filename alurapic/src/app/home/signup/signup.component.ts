@@ -1,8 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { PlatformDetectorService } from 'src/app/core/platform-detector/platform-detector.service';
 
+import { PlatformDetectorService } from 'src/app/core/platform-detector/platform-detector.service';
 import { lowerCaseValidator } from 'src/app/shared/validators/lower-case.validator';
 import { NewUser } from './new-user';
 import { SignupService } from './signup.service';

@@ -70,6 +70,10 @@ npm i jwt-decode
 
 ng build --prod
 
+npm i stacktrace-js
+
+npm i @types/stacktrace-js
+
 ## Anotações
 
 - Um feature module é um módulo que dentro dele tem um monte de conteúdo que fazem sentido serem agrupados juntos.
@@ -96,7 +100,7 @@ ng build --prod
 - Quando faz `[routerLink]="['photo']` ele montará o link dando continuidade do caminho em que o usuário se encontra, ou seja, se ele estivesse em `http://...:3000/rafael` ele ficaria `http://...:3000/rafael/photo`, más para ir para photos a partir da raiz tem que fazer `[routerLink]="['/photo']` que dai ele vai acessar `http://...:3000/photo`;
 - No css o `vp` é referente a tela do navegador, ou seja, exemplo: `heigth: 50vh` quer dizer que o `heigth` vai pegar 50% da viewport (tela visível);
 
-## Iniciando a API
+## Iniciando a API e o Log Server (em terminais separados)
 
 - npm install
 - npm start

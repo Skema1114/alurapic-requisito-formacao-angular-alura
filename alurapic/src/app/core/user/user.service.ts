@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import JwtDecode from 'jwt-decode';
+
 import { TokenService } from '../token/token.service';
 import { User } from './user';
-import jwtDecode from 'jwt-decode';
 
 @Injectable({
   providedIn: 'root',
@@ -26,7 +27,7 @@ export class UserService {
 
   private decodeAndNotify(): void {
     const token = this.tokenService.getToken();
-    const user = jwtDecode(token) as User;
+    const user = JwtDecode(token) as User;
     this.userName = user.name ?? '';
     this.userSubject.next(user);
   }
