@@ -24,18 +24,18 @@
 
 ## Comandos utilizados
 
-- npm install bootstrap
-- ng g c photos/photos-list
-- ng g c photos/photos-form
-- ng g m errors
-- ng g c errors/not-found
-- ng g c photos/photo-list/photos
-- ng g c photos/photo-list/load-button
-- npm i font-awesome
-- npm i jwt-decode
-- ng build --prod
-- npm i stacktrace-js
-- npm i @types/stacktrace-js
+- `npm install bootstrap`
+- `ng g c photos/photos-list`
+- `ng g c photos/photos-form`
+- `ng g m errors`
+- `ng g c errors/not-found`
+- `ng g c photos/photo-list/photos`
+- `ng g c photos/photo-list/load-button`
+- `npm i font-awesome`
+- `npm i jwt-decode`
+- `ng build --prod`
+- `npm i stacktrace-js`
+- `npm i @types/stacktrace-js`
 
 ## Anotações
 
